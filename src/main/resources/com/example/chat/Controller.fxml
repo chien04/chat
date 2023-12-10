@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chat.Controller">
+   <children>
+      <Label layoutX="73.0" layoutY="7.0" prefHeight="40.0" prefWidth="75.0" text="Rose" />
+      <TextField fx:id="textMessage" layoutX="65.0" layoutY="562.0" prefHeight="31.0" prefWidth="222.0" promptText="Your message..." />
+      <ScrollPane fx:id="chat" fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="81.0" maxHeight="468.0" maxWidth="323.0" prefHeight="468.0" prefWidth="323.0">
+         <content>
+            <VBox fx:id="vBox" maxHeight="466.0" maxWidth="332.0" prefHeight="466.0" prefWidth="332.0" />
+         </content>
+      </ScrollPane>
+      <ImageView fx:id="pictureWhite" fitHeight="40.0" fitWidth="40.0" layoutX="5.0" layoutY="557.0" onMouseEntered="#displayPictureGreen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../picture.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pictureGreen" fitHeight="40.0" fitWidth="40.0" layoutX="5.0" layoutY="557.0" onMouseExited="#displayPictureWhite" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../picture%20-%20Copy.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sendWhite" fitHeight="40.0" fitWidth="40.0" layoutX="305.0" layoutY="557.0" onMouseEntered="#displaySendGreen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sent.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sendGreen" fitHeight="40.0" fitWidth="40.0" layoutX="305.0" layoutY="557.0" onMouseClicked="#clickSendGreen" onMouseExited="#displaySendWhite" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sent%20-%20Copy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="57.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Screenshot%202023-12-10%20211545.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
